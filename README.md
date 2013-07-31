@@ -1,25 +1,25 @@
 WARBLER BENCHMARK
 =================
 
-`
+```
 $ rake assets:precompile
 $ warble executable compiled war
 $ mv warbler-bench.war warbler-bench-compiled.war
 $ warble executable war
-`
+```
 
 SHOWDOWN
 --------
 
 ## Puma
 
-`
+```
 $ rails s -e production -p 8080
-`
+```
 
 After 5 runs of:
 
-`
+```
 $ ab -n 2000 -c 20 http://localhost:8080/
 
 Finished 2000 requests
@@ -61,17 +61,17 @@ Percentage of the requests served within a certain time (ms)
   98%     42
   99%     51
  100%     75 (longest request)
-`
+```
 
 ## WAR (non compiled)
 
-`
+```
 $ java -jar warbler-bench.war
-`
+```
 
 After 5 runs of:
 
-`
+```
 $ ab -n 2000 -c 20 http://localhost:8080/
 
 Finished 2000 requests
@@ -113,17 +113,17 @@ Percentage of the requests served within a certain time (ms)
   98%     67
   99%     75
  100%    106 (longest request)
-`
+```
 
 ## WAR (compiled)
 
-`
+```
 $ java -jar warbler-bench-compiled.war
-`
+```
 
 After 5 runs of:
 
-`
+```
 $ ab -n 2000 -c 20 http://localhost:8080/
 
 Finished 2000 requests
@@ -167,4 +167,4 @@ Percentage of the requests served within a certain time (ms)
   98%     64
   99%     75
  100%    120 (longest request)
-
+```
